@@ -13,7 +13,7 @@ public class KeyValue {
         Storage.initLocalStorage();
         UserInterface ui = new UserInterface(new Scanner(System.in));
         ui.start();
-        Storage.save();
+        Storage.saveToFile();
 
     }
 }

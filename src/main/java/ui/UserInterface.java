@@ -3,6 +3,7 @@ package ui;
 import commands.Command;
 import commands.Fetch;
 import commands.Put;
+import commands.Remove;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -22,6 +23,7 @@ public class UserInterface {
         // initialize commands
         this.commands.put("put", new Put());
         this.commands.put("fetch", new Fetch());
+        this.commands.put("remove", new Remove());
 
         boolean quit = false;
         while (!quit) {
@@ -45,7 +47,7 @@ public class UserInterface {
             } else if (command.isBlank()) {
                 // do nothing
             } else {
-                System.out.println("Unknown command. Known commands are: put, fetch, exit.");
+                System.out.println("Unknown command. Known commands are: put, fetch, remove, exit.");
             }
         }
     }

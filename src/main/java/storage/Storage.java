@@ -16,10 +16,10 @@ public class Storage {
 
     public static void initLocalStorage() throws IOException {
         FileWriter fw = new FileWriter(FILENAME, true);
-        read();
+        readFromFile();
     }
 
-    private static void read() throws FileNotFoundException {
+    private static void readFromFile() throws FileNotFoundException {
         Scanner reader = new Scanner(new BufferedReader(new FileReader(FILENAME)));
 
         while (reader.hasNextLine()) {
@@ -30,7 +30,7 @@ public class Storage {
         reader.close();
     }
 
-    public static void save() throws IOException {
+    public static void saveToFile() throws IOException {
         // erase all data from the text file first
         clearData();
 
